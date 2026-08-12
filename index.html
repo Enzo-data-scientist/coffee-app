@@ -6,6 +6,132 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Prueba</h1>
+    <!-------------------------------------------------------------------
+        CABECERA Y NAVEGACION.
+    -------------------------------------------------------------------->
+    <header class="site-header">
+        <nav class="main-nav">
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="./images/logo-principal.png" alt="Logo de Encafeinados">
+                </a>
+            </div>
+            <ul class="nav-list">
+                <li> <a href="./pages/productos.html" class="nav-button">Productos</a> </li>
+                <li> <a href="./pages/nosotros.html" class="nav-button">Acerca de nosotros</a> </li>
+                <li> <a href="./pages/eventos.html" class="nav-button">Eventos</a> </li>
+                <li> <a href="./pages/educacion.html" class="nav-button">Educacion</a> </li>
+            </ul>
+            <div class="nav-login">
+                <a href="./pages/login.html" class="nav-button">Iniciar Sesion</a>
+                <a href="./pages/register.html" class="nav-button">Registrarse</a>
+            </div>       
+        </nav>
+    </header>
+
+    <!-------------------------------------------------------------------
+        CONTENIDO PRINCIPAL.
+    -------------------------------------------------------------------->
+    <main>
+        <!-----------------------------------------------------------
+            SECCION HERO
+        ------------------------------------------------------------>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>El Arte del Café de Especialidad</h1>
+                <p>Descubre granos seleccionados, nuestros cursos para coffelovers y la pasión que hay en cada taza.</p>
+                <div class="hero-buttons">
+                    <a href="#productos" class="btn-primary">Ver Productos</a>
+                    <a href="#educacion" class="btn-secondary">Aprender Más</a>
+                </div>
+            </div>
+        </section>
+
+        <!-----------------------------------------------------------
+            SECCION SOBRE NOSOTROS
+        ------------------------------------------------------------>
+        <section class="sobre-nosotros">
+            <h2>Quienes somos?</h2>
+            <p>Somos un equipo destinado a traerte toda la informacion y eventos del mundo del cafe. </p>
+            <a href="./pages/aboutus.html">Click para conocernos mejor</a>
+
+            <div class="imagen-article">
+                
+            </div>
+
+        </section>
+        
+        <!-----------------------------------------------------------
+            SECCION EDUCACION
+        ------------------------------------------------------------>
+        <section class="educacion" id="educacion">
+            <h2>Nuestros Ejes Principales</h2>
+            <div class="card-grid">
+                
+                <article class="card">
+                    <h3>Educación y Barismo</h3>
+                    <p>Certificaciones e itinerarios formativos para apasionados y profesionales del café.</p>
+                    <a href="#">Saber más &rarr;</a>
+                </article>
+
+                <article class="card">
+                    <h3>Origen y Estándares</h3>
+                    <p>Conoce los métodos de evaluación, tueste y trazabilidad del grano.</p>
+                    <a href="#">Saber más &rarr;</a>
+                </article>
+
+                <article class="card">
+                    <h3>Comunidad y Eventos</h3>
+                    <p>Conéctate con tostadores, productores y baristas de todo el mundo.</p>
+                    <a href="#">Saber más &rarr;</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="productos" id="productos"> 
+            <h2>Nuestros productos a la venta</h2>
+            <p>Este es un resumen de alguno de los productos que tenemos en venta</p>
+            <div class="carrusel">
+                
+                <article class="product-card">
+                    <img src="ruta-a-tu-imagen.jpg" alt="Nombre del Producto">
+                    <h3>Producto 1</h3>
+                    <a href="">Consultar Precio</a>
+                </article>
+
+                <article class="product-card">
+                    <img src="ruta-a-tu-imagen.jpg" alt="Nombre del Producto">
+                    <h3>Producto 2</h3>
+                    <a href="">Consultar Precio</a>
+                </article>
+
+                <article class="product-card">
+                    <img src="ruta-a-tu-imagen.jpg" alt="Nombre del Producto">
+                    <h3>Producto 3</h3>
+                    <a href="">Consultar Precio</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-----------------------------------------------------------
+        SECCION FOOTER O PIE DE PAGINA
+    ------------------------------------------------------------>
+    <footer class="site-footer">
+        <div class="footer-top">
+            <a href="#" class="back-to-top">Volver al inicio &uarr;</a>
+        </div>
+
+        <nav class="footer-nav">
+            <ul class="footer-nav-list">
+                <li><a href="./pages/nosotros.html">Quiénes Somos</a></li>
+                <li><a href="./pages/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="footer-copyright">
+            <p>desarrollado por enzo.dev</p>
+        </div>
+    </footer>
 </body>
 </html>
