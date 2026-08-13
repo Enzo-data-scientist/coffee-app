@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesion</title>
+    <link rel="stylesheet" href="../styles/login-styles.css">
+    <!--FAVICON-->
+    <link rel="icon" type="image/png" href="../images/logo-principal.png">
+</head>
+<body>
+
+    <!-------------------------------------------------------------------
+        CABECERA Y NAVEGACION.
+    -------------------------------------------------------------------->
+    <header class="site-header">
+        <nav class="main-nav">
+            <div class="logo">
+                <a href=".././index.html">
+                    <img src=".././images/logo-principal.png" alt="Logo de Encafeinados">
+                </a>
+            </div>
+            <ul class="nav-list">
+                <li> <a href="./productos.html" class="nav-button">Productos</a> </li>
+                <li> <a href="./nosotros.html" class="nav-button">Acerca de nosotros</a> </li>
+                <li> <a href="./eventos.html" class="nav-button">Eventos</a> </li>
+                <li> <a href="./educacion.html" class="nav-button">Educacion</a> </li>
+            </ul>
+            <div class="nav-login">
+                <a href="./login.html" class="nav-button">Iniciar Sesion</a>
+                <a href="./register.html" class="nav-button">Registrarse</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="login-container">
+        <section class="login-card">
+
+            <header class="login-header">
+                <img src="../images/logo-principal.png" alt="Imagen del logo de Encafeinados" >
+                <h1>Bienvenido de nuevo</h1>
+                <p>Por favor, ingresa tus datos para continuar.</p>
+            </header>
+            
+            <form action="/login-endpoint" method="POST" class="login-form">
+
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" placeholder="*********" required>
+                </div>
+
+                <button type="submit" class="buton-submit">Ingresar</button>
+            </form>
+
+            <footer class="login-footer">
+                <a href="/recuperar-password">¿Olvidaste tu contraseña?</a>
+                <p> O </p>
+                <a href="./register.html">Regístrate aquí</a>
+            </footer>
+        </section>
+    </main>
+
+</body>
+</html>
