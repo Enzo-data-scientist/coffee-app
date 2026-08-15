@@ -1,0 +1,42 @@
+$color-footer: #5f0512;
+$color-text-footer: #fbfbef;
+$color-text-secondary: #6b5e55;
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; // Permite que en pantallas chicas los elementos ocupen una nueva línea
+  padding: 1.5rem 2rem;
+  background-color: $color-footer;
+
+  .footer-nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem; // Usamos gap en lugar de padding individual en los <li>
+
+    li {
+      list-style: none;
+
+      a {
+        text-decoration: none;
+        color: $color-text-footer;
+      }
+    }
+  }
+
+  .footer-top {
+    a {
+      text-decoration: none;
+      color: $color-text-footer;
+    }
+  }
+
+  .footer-copyright {
+    p {
+      color: $color-text-secondary;
+    }
+  }
+}

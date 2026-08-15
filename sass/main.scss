@@ -1,0 +1,22 @@
+/*Llamo primero a las utilidades y reset*/
+@use "./utilities/reset";
+
+
+/*Llamo a los componentes
+    @use "./components/header"; 
+    @use "./components/footer"; 
+   
+*/
+
+/*Llamo a las paginas*/
+@use "./pages/home"; 
+
+@use "./pages/educacion";
+@use "./pages/eventos";
+@use "./pages/nosotros";
+@use "./pages/productos";     
+
+@use "./pages/login"; 
+@use "./pages/register";
+@use "./pages/contacto";
+
