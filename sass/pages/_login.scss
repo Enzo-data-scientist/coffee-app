@@ -1,2 +1,192 @@
+/*Llamada de utilidades y componentes */
+@use "../utilities/reset";
+@use "../utilities/variables" as *;
+@use "../base/mixins";
+
 /*Llamo a los componentes a utilizar*/
-@use "../components/header"; 
+@use "../components/header";
+@use "../components/footer";  
+
+// ==========================================
+// MIXINS DE APOYO (estos coinciden con los de register, deberia hacer un componente reutilizable)
+// ==========================================
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin base-body{
+    font-family: $font-family-base;
+    background-color: $color-bg-light;
+    color: $color-text-main;
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+body {
+  @include base-body;
+}
+
+
+
+// ==========================================
+// ESTRUCTURA Y TARJETA LOGIN
+// ==========================================
+.login-container {
+    @include flex-center;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    background: radial-gradient(circle at top, rgba($color-accent, 0.25), transparent 70%);
+
+    .login-card {
+        width: 100%;
+        max-width: 420px;
+        background-color: $color-card-bg;
+        padding: 2.5rem 2rem;
+        border-radius: $radius-md;
+        box-shadow: $shadow-soft;
+        border: 1px solid rgba($color-primary, 0.06);
+        transition: $transition-fast;
+
+        &:hover {
+            box-shadow: $shadow-hover;
+        }
+    }
+
+    // ENCABEZADO Y LOGO
+    .login-header {
+        text-align: center;
+        margin-bottom: 2rem;
+
+        img {
+            max-width: 130px;
+            height: auto;
+            margin-bottom: 1.25rem;
+            object-fit: contain;
+        }
+
+        h1 {
+            color: $color-primary;
+            font-size: 1.75rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            color: $color-text-muted;
+            font-size: 0.925rem;
+        }
+    }
+
+    // FORMULARIO Y CAMPOS
+    .login-form {
+        @include flex-column;
+        gap: 1.25rem;
+
+        .form-group {
+            @include flex-column;
+            gap: 0.4rem;
+
+            label {
+                font-size: 0.875rem;
+                font-weight: 600;
+                color: $color-secondary;
+            }
+
+            input {
+                width: 100%;
+                padding: 0.8rem 1rem;
+                font-size: 0.95rem;
+                font-family: inherit;
+                color: $color-text-main;
+                background-color: $color-bg-light;
+                border: 1.5px solid rgba($color-primary, 0.15);
+                border-radius: $radius-sm;
+                outline: none;
+                transition: $transition-fast;
+
+                &::placeholder {
+                    color: lighten($color-text-muted, 20%);
+                }
+
+                &:focus {
+                    border-color: $color-highlight;
+                    background-color: $color-card-bg;
+                    box-shadow: 0 0 0 4px rgba($color-highlight, 0.15);
+                }
+            }
+        }
+
+        // BOTÓN DE INGRESO (Maneja la clase .buton-submit de tu HTML)
+        .buton-submit {
+        margin-top: 0.5rem;
+        padding: 0.85rem;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #ffffff;
+        background-color: $color-primary;
+        border: none;
+        border-radius: $radius-sm;
+        cursor: pointer;
+        transition: $transition-fast;
+
+        &:hover {
+            background-color: $color-secondary;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba($color-secondary, 0.25);
+        }
+
+        &:active {
+            transform: translateY(0);
+        }
+        }
+    }
+
+    // PIE DE LA TARJETA / OPCIONES SECUNDARIAS
+    .login-footer {
+        margin-top: 2rem;
+        padding-top: 1.25rem;
+        border-top: 1px solid rgba($color-primary, 0.08);
+        @include flex-column;
+        align-items: center;
+        gap: 0.6rem;
+
+        p {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: lighten($color-text-muted, 15%);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        a {
+            font-size: 0.875rem;
+            color: $color-text-muted;
+            text-decoration: none;
+            font-weight: 500;
+            transition: $transition-fast;
+
+            &:hover {
+                color: $color-highlight;
+            }
+
+            // Enlace de registro resaltado
+            &[href*="register"] {
+                color: $color-primary;
+                font-weight: 700;
+
+                &:hover {
+                    color: $color-highlight;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

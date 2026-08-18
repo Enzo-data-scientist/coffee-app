@@ -20,14 +20,17 @@
     flex-direction: column;
 }
 
-// ESTILOS BASE
-
-body {
+@mixin base-body{
     font-family: $font-family-base;
     background-color: $color-bg-light;
     color: $color-text-main;
     min-height: 100vh;
     line-height: 1.5;
+}
+
+//Estilos base
+body {
+  @include base-body;
 }
 
 // ESTRUCTURA PRINCIPAL DEL FORMULARIO
