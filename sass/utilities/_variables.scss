@@ -1,34 +1,18 @@
-/*
-:root {
-    COLOR ETIQUETAS PRINCIPALES
-    --color-header: #371005;
-    --color-background:  #e3d6c8;  #F8E2D1 Blanco crema de fondo, color background 
-    --color-bg-transparent: rgba(rgb(227, 214, 200, 0.85));
-    --color-footer: #5f0512;
+// Paleta de colores (Inspirada en café de especialidad)
+$color-primary: #3c2a21;       // Café oscuro / Espresso
+$color-secondary: #1a120b;     // Oscuro profudo
+$color-accent: #d5cea3;        // Beige / Crema
+$color-highlight: #e5890a;     // Ámbar / Dorado
+$color-bg-light: #fdfbf7;      // Blanco cálido / Marfil
+$color-card-bg: #ffffff;
+$color-text-main: #2b2b2b;
+$color-text-muted: #666666;
 
-    --color-card: #d9b597;
+// Tipografía, Bordes y Transiciones
+$font-family-base: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+$radius-sm: 8px;
+$radius-md: 16px;
+$transition-fast: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+$shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.08);
+$shadow-hover: 0 15px 35px rgba(60, 42, 33, 0.18);
 
-    /*COLOR DE TEXTOS
-    --color-text: #333;
-    --color-text-secondary: #6b5e55;
- 
-    --color-text-nav: #fbfbef;
-    --color-text-footer: #fbfbef;
-
-    --color-text-principal: #fbfbef;
-    --color-hero-p: #d1c7bd;
-
-    --color-text-hover: #76420c;
-    --color-bg-text-hover: #d9b597;
-
-
-    /*Transiciones y efectos
-    --shadow-soft: 0 4px 15px rgba(0, 0, 0, 0.1);
-    --transition-smooth: all 0.3s ease;
-
-    --bg-overlay: rgba(20, 15, 12, 0.75); /* Oscurecido de la imagen del hero para legibilidad 
-
-    /*Textos
-    --font-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-*/

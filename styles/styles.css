@@ -1,5 +1,5 @@
 /*Llamo primero a las utilidades y reset*/
-* {
+*, *::before, *::after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -423,7 +423,131 @@ main {
 /*Llamo a los componentes*/
 /*Llamo a los componentes*/
 /*Llamo a los componentes a utilizar*/
-/*Llamo a los componentes a utilizar*/
+/*Llamo primero a las utilidades y reset*/
+/*Llamo a los componentes*/
+/*Llamada de utilidades y componentes */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #fdfbf7;
+  color: #2b2b2b;
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  background: radial-gradient(circle at top, rgba(213, 206, 163, 0.25), transparent 70%);
+}
+.main-content .register-container {
+  width: 100%;
+  max-width: 440px;
+}
+.main-content .register-card {
+  background-color: #ffffff;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(60, 42, 33, 0.06);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.main-content .register-card:hover {
+  box-shadow: 0 15px 35px rgba(60, 42, 33, 0.18);
+}
+.main-content .register-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.main-content .register-header h1 {
+  color: #3c2a21;
+  font-size: 1.85rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+.main-content .register-header p {
+  color: #666666;
+  font-size: 0.925rem;
+}
+.main-content .register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.main-content .register-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.main-content .register-form .form-group label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1a120b;
+}
+.main-content .register-form .form-group input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: #2b2b2b;
+  background-color: #fdfbf7;
+  border: 1.5px solid rgba(60, 42, 33, 0.15);
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.main-content .register-form .form-group input::placeholder {
+  color: #999999;
+}
+.main-content .register-form .form-group input:focus {
+  border-color: #e5890a;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(229, 137, 10, 0.15);
+}
+.main-content .register-form .btn-submit {
+  margin-top: 0.5rem;
+  padding: 0.85rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #3c2a21;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.main-content .register-form .btn-submit:hover {
+  background-color: #1a120b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(26, 18, 11, 0.25);
+}
+.main-content .register-form .btn-submit:active {
+  transform: translateY(0);
+}
+.main-content .register-footer {
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(60, 42, 33, 0.08);
+  text-align: center;
+}
+.main-content .register-footer p {
+  font-size: 0.9rem;
+  color: #666666;
+}
+.main-content .register-footer p a {
+  color: #e5890a;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.main-content .register-footer p a:hover {
+  color: #3c2a21;
+  text-decoration: underline;
+}
+
 /*Llamo a los componentes a utilizar*/
 
 /*# sourceMappingURL=styles.css.map */

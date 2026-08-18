@@ -1,2 +1,165 @@
-/*Llamo a los componentes a utilizar*/
+/*Llamada de utilidades y componentes */
+@use "../utilities/reset";
+@use "../utilities/variables" as *;
+
 @use "../components/header"; 
+@use "../components/footer";
+
+
+// ==========================================
+// 2. MIXINS
+// ==========================================
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+// ESTILOS BASE
+
+body {
+    font-family: $font-family-base;
+    background-color: $color-bg-light;
+    color: $color-text-main;
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+// ESTRUCTURA PRINCIPAL DEL FORMULARIO
+.main-content {
+    @include flex-center;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    background: radial-gradient(circle at top, rgba($color-accent, 0.25), transparent 70%);
+
+    .register-container {
+        width: 100%;
+        max-width: 440px;
+    }
+
+    .register-card {
+        background-color: $color-card-bg;
+        padding: 2.5rem 2rem;
+        border-radius: $radius-md;
+        box-shadow: $shadow-soft;
+        border: 1px solid rgba($color-primary, 0.06);
+        transition: $transition-fast;
+
+        &:hover {
+            box-shadow: $shadow-hover;
+        }
+    }
+
+    // ENCABEZADO DE LA TARJETA
+    .register-header {
+        text-align: center;
+        margin-bottom: 2rem;
+
+        h1 {
+            color: $color-primary;
+            font-size: 1.85rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            color: $color-text-muted;
+            font-size: 0.925rem;
+        }
+    }
+
+    // FORMULARIO Y CAMPOS DE LA TARJETA
+    .register-form {
+        @include flex-column;
+        gap: 1.25rem;
+
+        .form-group {
+        @include flex-column;
+        gap: 0.4rem;
+
+            label{
+                font-size: 0.875rem;
+                font-weight: 600;
+                color: $color-secondary;
+            }
+
+            input {
+                width: 100%;
+                padding: 0.8rem 1rem;
+                font-size: 0.95rem;
+                font-family: inherit;
+                color: $color-text-main;
+                background-color: $color-bg-light;
+                border: 1.5px solid rgba($color-primary, 0.15);
+                border-radius: $radius-sm;
+                outline: none;
+                transition: $transition-fast;
+
+                &::placeholder {
+                    color: lighten($color-text-muted, 20%);
+                }
+
+                &:focus {
+                    border-color: $color-highlight;
+                    background-color: $color-card-bg;
+                    box-shadow: 0 0 0 4px rgba($color-highlight, 0.15);
+                }
+            }
+        }
+
+        // BOTÓN DE REGISTRO
+        .btn-submit {
+            margin-top: 0.5rem;
+            padding: 0.85rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #ffffff;
+            background-color: $color-primary;
+            border: none;
+            border-radius: $radius-sm;
+            cursor: pointer;
+            transition: $transition-fast;
+
+            &:hover {
+                background-color: $color-secondary;
+                transform: translateY(-2px);
+                box-shadow: 0 6px 15px rgba($color-secondary, 0.25);
+            }
+
+            &:active {
+                transform: translateY(0);
+            }
+        }
+    }
+
+    // PIE DE LA TARJETA
+    .register-footer {
+        margin-top: 2rem;
+        padding-top: 1.25rem;
+        border-top: 1px solid rgba($color-primary, 0.08);
+        text-align: center;
+
+        p {
+            font-size: 0.9rem;
+            color: $color-text-muted;
+
+        a {
+            color: $color-highlight;
+            font-weight: 700;
+            text-decoration: none;
+            transition: $transition-fast;
+
+            &:hover {
+                color: $color-primary;
+                text-decoration: underline;
+            }
+        }
+        }
+    }
+}
