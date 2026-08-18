@@ -38,10 +38,10 @@
             SECCION HERO
         ------------------------------------------------------------>
         <section class="hero">
-            <div class="hero-content">
+            <div class="hero__content">
                 <h1>El Arte del Café de Especialidad</h1>
                 <p>Descubre granos seleccionados, nuestros cursos para coffelovers y la pasión que hay en cada taza.</p>
-                <div class="hero-buttons">
+                <div class="hero__buttons">
                     <a href="#productos" class="btn-primary">Ver Productos</a>
                     <a href="#educacion" class="btn-secondary">Aprender Más</a>
                 </div>
@@ -51,64 +51,71 @@
         <!-----------------------------------------------------------
             SECCION SOBRE NOSOTROS
         ------------------------------------------------------------>
-        <section class="sobre-nosotros">
-            <h2>Quienes somos?</h2>
-            <p>Somos un equipo destinado a traerte toda la informacion y eventos del mundo del cafe. </p>
-            <a href="./pages/aboutus.html">Click para conocernos mejor</a>
-
-            <div class="imagen-article">
-                
+        <section class="nosotros" id="nosotros">
+            <div class="nosotros__descripcion">
+                <h2>Quienes somos?</h2>
+                <p>Somos un equipo destinado a traerte toda la informacion y eventos del mundo del cafe. </p>
+                <a href="./pages/aboutus.html">Click para conocernos mejor</a>
+            </div> 
+            <div class="nosotros__imagen">
+                <img src="./images/nosotros-imagen.jpg" alt="Imagen de dos baristas profesionales">
             </div>
-
         </section>
-        
         <!-----------------------------------------------------------
             SECCION EDUCACION
         ------------------------------------------------------------>
         <section class="educacion" id="educacion">
-            <h2>Nuestros Ejes Principales</h2>
-            <div class="card-grid">
+            <div class="educacion_descripcion">
+                 <h2 >Nuestros Ejes Principales</h2>
+                 <p>Conoce cuales son nuestros principales contenidos de ensañanza y proximos eventos de la comunidad cafetera.</p>
+            </div>
+           
+            <div class="educacion__container">
                 
                 <article class="card">
                     <h3>Educación y Barismo</h3>
                     <p>Certificaciones e itinerarios formativos para apasionados y profesionales del café.</p>
-                    <a href="#">Saber más &rarr;</a>
+                    <a href="./pages/educacion.html">Saber más &rarr;</a>
                 </article>
 
                 <article class="card">
                     <h3>Origen y Estándares</h3>
                     <p>Conoce los métodos de evaluación, tueste y trazabilidad del grano.</p>
-                    <a href="#">Saber más &rarr;</a>
+                    <a href="./pages/educacion.html">Saber más &rarr;</a>
                 </article>
 
                 <article class="card">
                     <h3>Comunidad y Eventos</h3>
                     <p>Conéctate con tostadores, productores y baristas de todo el mundo.</p>
-                    <a href="#">Saber más &rarr;</a>
+                    <a href="./pages/eventos.html">Saber más &rarr;</a>
                 </article>
             </div>
         </section>
 
-        <section class="productos" id="productos"> 
-            <h2>Productos en venta.</h2>
-            <p>Este es un resumen de algunos de los productos que tenemos en venta.</p>
-            <div class="product__container">
+        <section class="productos" id="productos">
+            
+            <div class="productos__descripcion">
+                <h2>Productos en venta.</h2>
+                <p>Este es un resumen de algunos de los productos que tenemos en venta.</p>
+            </div>
+            
+            <div class="productos__container">
                 
                 <article class="product__card">
-                    <img src="ruta-a-tu-imagen.jpg" alt="Nombre del Producto">
+                    <img src="./images/maquina-cafe.avif" alt="Nombre del Producto">
                     <h3>Maquinas de Espresso.</h3>
                     <a href="./pages/productos.html">Consultar Precio</a>
                 </article>
 
                 <article class="product__card">
-                    <img src="ruta-a-tu-imagen.jpg" alt="Nombre del Producto">
+                    <img src="./images/granos-cafe.webp" alt="Nombre del Producto">
                     <h3>Granos de cafe seleccionados.</h3>
                     <a href="./pages/productos.html">Consultar Precio</a>
                 </article>
 
                 <article class="product__card">
-                    <img src="ruta-a-tu-imagen.jpg" alt="Nombre del Producto">
-                    <h3>Cafeteras.</h3>
+                    <img src="./images/imagen-chemex.png" alt="Nombre del Producto">
+                    <h3>Cafeteras y molinillos.</h3>
                     <a href="./pages/productos.html">Consultar Precio</a>
                 </article>
             </div>

@@ -42,7 +42,143 @@
   color: #6b5e55;
 }
 
+/* ==========================================
+   ESTILOS DE LA CABECERA (SITE-HEADER)
+   ========================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease-in-out;
+}
+.site-header .main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.8rem 1.5rem;
+}
+.site-header .main-nav .logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.site-header .main-nav .logo a img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+.site-header .main-nav .logo a img:hover {
+  transform: scale(1.04);
+}
+.site-header .main-nav .nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.site-header .main-nav .nav-list li a {
+  position: relative;
+  text-decoration: none;
+  color: #1e1e1e;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  transition: all 0.25s ease-in-out;
+}
+.site-header .main-nav .nav-list li a::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background-color: #3c2a21;
+  transition: all 0.25s ease-in-out;
+  transform: translateX(-50%);
+}
+.site-header .main-nav .nav-list li a:hover {
+  color: #3c2a21;
+}
+.site-header .main-nav .nav-list li a:hover::after {
+  width: 70%;
+}
+.site-header .main-nav .nav-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+.site-header .main-nav .nav-login .nav-button {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.55rem 1.1rem;
+  border-radius: 20px;
+  transition: all 0.25s ease-in-out;
+}
+.site-header .main-nav .nav-login .nav-button[href*=login] {
+  color: #3c2a21;
+  background-color: #f4f1ea;
+  border: 1px solid rgba(60, 42, 33, 0.15);
+}
+.site-header .main-nav .nav-login .nav-button[href*=login]:hover {
+  background-color: #e2ded5;
+  color: #3c2a21;
+}
+.site-header .main-nav .nav-login .nav-button[href*=register] {
+  color: #ffffff;
+  background-color: #3c2a21;
+  border: 1px solid #3c2a21;
+  box-shadow: 0 2px 8px rgba(60, 42, 33, 0.2);
+}
+.site-header .main-nav .nav-login .nav-button[href*=register]:hover {
+  background-color: rgb(36.4326375712%, 25.5028462998%, 20.0379506641%);
+  border-color: rgb(36.4326375712%, 25.5028462998%, 20.0379506641%);
+  transform: translateY(-1px);
+}
+@media (max-width: 900px) {
+  .site-header .main-nav {
+    flex-wrap: wrap;
+    padding: 0.8rem 1rem;
+  }
+  .site-header .main-nav .nav-list {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    padding-top: 0.5rem;
+    border-top: 1px solid #f0f0f0;
+    gap: 0.5rem;
+  }
+  .site-header .main-nav .nav-list li a {
+    font-size: 0.88rem;
+    padding: 0.4rem 0.6rem;
+  }
+  .site-header .main-nav .nav-login .nav-button {
+    padding: 0.45rem 0.85rem;
+    font-size: 0.85rem;
+  }
+}
+
+/*Llamo a los componentes a utilizar*/
+/*Llamo a los componentes a utilizar*/
+/*Llamo a los componentes a utilizar*/
 /*Llamo a los componentes*/
 /*Llamo a los componentes*/
+/*Llamo a los componentes a utilizar*/
+/*Llamo a los componentes a utilizar*/
+/*Llamo a los componentes a utilizar*/
 
 /*# sourceMappingURL=styles.css.map */
