@@ -1,0 +1,67 @@
+@use '../utilities/variables-home' as *;
+@use '../base/mixins' as *;
+
+.educacion {
+  background-color: mix($color-bg-light, $color-accent, 85%);
+  padding: 5rem 1.5rem;
+
+  &_descripcion {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+
+    h2 {
+      font-size: 2.2rem;
+      color: $color-primary;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: $color-text-muted;
+    }
+  }
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    @include auto-grid(280px, 2rem);
+
+    .card {
+      background-color: $color-card-bg;
+      padding: 2.5rem 2rem;
+      border-radius: $radius-md;
+      box-shadow: $shadow-soft;
+      @include flex-layout(column, space-between, flex-start, 0);
+      transition: $transition-fast;
+      border-top: 4px solid $color-primary;
+
+      &:hover {
+        transform: translateY(-8px);
+        box-shadow: $shadow-hover;
+      }
+
+      h3 {
+        font-size: 1.35rem;
+        color: $color-primary;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        color: $color-text-muted;
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+      }
+
+      a {
+        color: $color-highlight;
+        font-weight: 700;
+        text-decoration: none;
+        transition: $transition-fast;
+
+        &:hover {
+          letter-spacing: 0.5px;
+        }
+      }
+    }
+  }
+}

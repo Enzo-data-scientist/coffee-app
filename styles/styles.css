@@ -172,6 +172,251 @@
   }
 }
 
+/*Mixins a usar en la pagina home.*/
+.hero {
+  min-height: 85vh;
+  background: linear-gradient(rgba(26, 18, 11, 0.25), rgba(60, 42, 33, 0.85)), url("../images/hero-imagen-bg.avif") center/cover no-repeat;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  color: #fdfbf7;
+}
+.hero__content {
+  max-width: 800px;
+}
+.hero__content h1 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+}
+.hero__content p {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: #d5cea3;
+  margin-bottom: 2rem;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.hero__buttons .btn-primary, .hero__buttons .btn-secondary {
+  padding: 0.9rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: inline-block;
+}
+.hero__buttons .btn-primary {
+  background-color: #e5890a;
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(229, 137, 10, 0.4);
+}
+.hero__buttons .btn-primary:hover {
+  background-color: rgb(74.4733776356%, 44.5539420789%, 3.2521125605%);
+  transform: translateY(-3px);
+}
+.hero__buttons .btn-secondary {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #d5cea3;
+}
+.hero__buttons .btn-secondary:hover {
+  background-color: #d5cea3;
+  color: #3c2a21;
+  transform: translateY(-3px);
+}
+
+.nosotros {
+  max-width: 1200px;
+  margin: 5rem auto;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3rem;
+  align-items: center;
+}
+.nosotros__descripcion h2 {
+  font-size: 2.2rem;
+  color: #3c2a21;
+  margin-bottom: 1rem;
+}
+.nosotros__descripcion p {
+  color: #666666;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.nosotros__descripcion a {
+  color: #3c2a21;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid #e5890a;
+  padding-bottom: 3px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.nosotros__descripcion a:hover {
+  color: #e5890a;
+}
+.nosotros__imagen img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.nosotros__imagen img:hover {
+  transform: scale(1.02);
+}
+
+.educacion {
+  background-color: rgb(96.862745098%, 95.7843137255%, 91.9215686275%);
+  padding: 5rem 1.5rem;
+}
+.educacion_descripcion {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+}
+.educacion_descripcion h2 {
+  font-size: 2.2rem;
+  color: #3c2a21;
+  margin-bottom: 0.5rem;
+}
+.educacion_descripcion p {
+  color: #666666;
+}
+.educacion__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.educacion__container .card {
+  background-color: #ffffff;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border-top: 4px solid #3c2a21;
+}
+.educacion__container .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(60, 42, 33, 0.18);
+}
+.educacion__container .card h3 {
+  font-size: 1.35rem;
+  color: #3c2a21;
+  margin-bottom: 1rem;
+}
+.educacion__container .card p {
+  color: #666666;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+.educacion__container .card a {
+  color: #e5890a;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.educacion__container .card a:hover {
+  letter-spacing: 0.5px;
+}
+
+.productos {
+  max-width: 1200px;
+  margin: 5rem auto;
+  padding: 0 1.5rem;
+}
+.productos__descripcion {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.productos__descripcion h2 {
+  font-size: 2.2rem;
+  color: #3c2a21;
+}
+.productos__descripcion p {
+  color: #666666;
+}
+.productos__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+}
+.productos__container .product__card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  text-align: center;
+  padding-bottom: 2rem;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.productos__container .product__card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(60, 42, 33, 0.18);
+}
+.productos__container .product__card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+}
+.productos__container .product__card h3 {
+  font-size: 1.25rem;
+  color: #3c2a21;
+  padding: 0 1rem;
+  margin-bottom: 1.2rem;
+}
+.productos__container .product__card a {
+  background-color: #3c2a21;
+  color: #ffffff;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.productos__container .product__card a:hover {
+  background-color: #e5890a;
+}
+
+/*Estilos base*/
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #fdfbf7;
+  color: #2b2b2b;
+  line-height: 1.6;
+}
+
+main {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 /*Llamo a los componentes a utilizar*/
 /*Llamo a los componentes a utilizar*/
 /*Llamo a los componentes a utilizar*/

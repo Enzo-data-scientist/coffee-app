@@ -1,0 +1,71 @@
+@use '../utilities/variables-home' as *;
+@use '../base/mixins' as *;
+
+.hero {
+  min-height: 85vh;
+  background: linear-gradient(rgba($color-secondary, 0.25), rgba($color-primary, 0.85)),
+              url('../images/hero-imagen-bg.avif') center/cover no-repeat;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  color: $color-bg-light;
+
+  &__content {
+    max-width: 800px;
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      font-weight: 800;
+      margin-bottom: 1rem;
+      letter-spacing: -0.5px;
+      color: #ffffff;
+    }
+
+    p {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: $color-accent;
+      margin-bottom: 2rem;
+      max-width: 650px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__buttons {
+    @include flex-layout(row, center, center, 1rem);
+    flex-wrap: wrap;
+
+    .btn-primary, .btn-secondary {
+      padding: 0.9rem 2rem;
+      border-radius: $radius-sm;
+      font-weight: 600;
+      text-decoration: none;
+      transition: $transition-fast;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background-color: $color-highlight;
+      color: #ffffff;
+      box-shadow: 0 4px 15px rgba($color-highlight, 0.4);
+
+      &:hover {
+        background-color: darken($color-highlight, 8%);
+        transform: translateY(-3px);
+      }
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: #ffffff;
+      border: 2px solid $color-accent;
+
+      &:hover {
+        background-color: $color-accent;
+        color: $color-primary;
+        transform: translateY(-3px);
+      }
+    }
+  }
+}

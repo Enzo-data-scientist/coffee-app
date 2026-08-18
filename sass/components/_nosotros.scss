@@ -1,0 +1,52 @@
+@use '../utilities/variables-home' as *;
+@use '../base/mixins' as *;
+
+.nosotros {
+  max-width: 1200px;
+  margin: 5rem auto;
+  padding: 0 1.5rem;
+  @include auto-grid(320px, 3rem);
+  align-items: center;
+
+  &__descripcion {
+    h2 {
+      font-size: 2.2rem;
+      color: $color-primary;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: $color-text-muted;
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    a {
+      color: $color-primary;
+      font-weight: 700;
+      text-decoration: none;
+      border-bottom: 2px solid $color-highlight;
+      padding-bottom: 3px;
+      transition: $transition-fast;
+
+      &:hover {
+        color: $color-highlight;
+      }
+    }
+  }
+
+  &__imagen {
+    img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      border-radius: $radius-md;
+      box-shadow: $shadow-soft;
+      transition: $transition-fast;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+  }
+}

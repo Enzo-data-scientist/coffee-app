@@ -1,0 +1,25 @@
+/*Mixins a usar en la pagina home.*/
+// Mixin para Flexbox centrado o direccionado
+@mixin flex-layout($direction: row, $justify: center, $align: center, $gap: 1rem) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+// Mixin para Grillas Responsivas con Auto-fit
+@mixin auto-grid($min-width: 280px, $gap: 2rem) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
+  gap: $gap;
+}
+
+// Media Query Mixin
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == 'tablet' {
+    @media (min-width: 768px) { @content; }
+  } @else if $breakpoint == 'desktop' {
+    @media (min-width: 1024px) { @content; }
+  }
+}
