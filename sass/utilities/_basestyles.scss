@@ -1,0 +1,13 @@
+@use "./variables" as *;
+
+body {
+  font-family: $font-family-base;
+  background-color: $color-bg-light;
+  color: $color-text-main;
+  line-height: 1.6;
+}
+
+main {
+  width: 100%;
+  overflow-x: hidden;
+}
