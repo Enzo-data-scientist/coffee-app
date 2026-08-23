@@ -1,2 +1,153 @@
+/*Llamo el reset y los estilos base.*/
+@use "../utilities/reset"; 
+@use "../utilities/basestyles"; 
+@use "../utilities/variables" as *; 
+
+/*Llamo a los mixins*/
+@use "../base/mixins-event" as *;
+
 /*Llamo a los componentes a utilizar*/
 @use "../components/header"; 
+@use "../components/footer"; 
+
+.main-content {
+  display: flex;
+  flex-direction: column; // Ordena las secciones hacia abajo
+  width: 100%;
+  overflow-x: hidden;
+}
+// ==========================================
+// 4. SECCIÓN HERO DE EVENTOS
+// ==========================================
+.events-hero {
+  width: 100%;                  // Ocupa todo el ancho de la pantalla
+  min-height: 40vh;
+  padding: 4rem 1.5rem;
+  background: linear-gradient(135deg, rgba($color-secondary, 0.95), rgba($color-primary, 0.9));
+  
+  // Centrado mediante Flexbox
+  display: flex;
+  flex-direction: column;
+  justify-content: center;      // Centrado vertical
+  align-items: center;          // Centrado horizontal
+  text-align: center;           // Alineación de texto
+  color: #ffffff;
+
+  h1 {
+    width: 100%;
+    margin-bottom: 0.8rem;
+  }
+
+  p {
+    max-width: 680px;
+    margin: 0 auto;             // Centra el párrafo dentro del bloque
+  }
+}
+// ==========================================
+// 5. GRILLA DE COMPETENCIAS / EVENTOS
+// ==========================================
+.events-grid-section {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+
+  h2 {
+    font-size: 2rem;
+    color: $color-primary;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 3rem;
+  }
+
+  .card-grid {
+    @include auto-grid(320px, 2.5rem);
+  }
+
+  // TARJETA DE EVENTO
+  .event-card {
+    background-color: $color-card-bg;
+    border-radius: $radius-md;
+    overflow: hidden;
+    border: 1px solid rgba($color-primary, 0.08);
+    box-shadow: $shadow-soft;
+    @include flex-column;
+    transition: $transition-fast;
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: $shadow-hover;
+
+      img {
+        transform: scale(1.05);
+      }
+    }
+
+    // Imagen del evento
+    img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    // Información del evento
+    .event-info {
+      padding: 1.75rem;
+      @include flex-column;
+      flex-grow: 1;
+
+      h3 {
+        font-size: 1.35rem;
+        color: $color-primary;
+        font-weight: 700;
+        line-height: 1.3;
+        margin-bottom: 0.75rem;
+      }
+
+      .event-date,
+      .event-location {
+        font-size: 0.875rem;
+        font-weight: 600;
+        margin-bottom: 0.35rem;
+      }
+
+      .event-date {
+        color: $color-highlight;
+      }
+
+      .event-location {
+        color: $color-secondary;
+      }
+
+      p:not(.event-date):not(.event-location) {
+        color: $color-text-muted;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-top: 0.75rem;
+        margin-bottom: 1.75rem;
+        flex-grow: 1;
+      }
+
+      // Botón de acción
+      .btn {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        padding: 0.8rem 1rem;
+        background-color: $color-primary;
+        color: #ffffff;
+        font-weight: 600;
+        font-size: 0.95rem;
+        text-decoration: none;
+        border-radius: $radius-sm;
+        transition: $transition-fast;
+
+        &:hover {
+          background-color: $color-highlight;
+          box-shadow: 0 4px 15px rgba($color-highlight, 0.3);
+        }
+      }
+    }
+  }
+}

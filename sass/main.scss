@@ -1,13 +1,6 @@
 /*Llamo primero a las utilidades y reset*/
 @use "./utilities/reset";
 
-
-/*Llamo a los componentes
-    @use "./components/header"; 
-    @use "./components/footer"; 
-   
-*/
-
 /*Llamo a las paginas*/
 @use "./pages/home"; 
 
